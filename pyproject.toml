@@ -1,0 +1,34 @@
+[project]
+name = "spotify-playlist-organizer"
+version = "0.1.0"
+description = "Sort your liked Spotify songs into genre and mood playlists"
+readme = "README.md"
+authors = [
+    { name = "Nick Decorte" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "spotipy>=2.26,<3",
+]
+
+[project.scripts]
+spotify-playlist-organizer = "spotify_playlist_organizer.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.0,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.6",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

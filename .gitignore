@@ -1,0 +1,27 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+
+# Local Spotify app settings
+.env
+
+# Your song data
+liked-songs.json
+uncategorized-songs.json
+categories-batch-*.json
+song-categories.json
+song-categories-next.json
+
+# macOS
+.DS_Store
